@@ -18,8 +18,7 @@ public class Vehicle {
     public String getName() {
         return name;
     }
-    public int setCurrentSpeed(int currentSpeed){
-        return currentSpeed;
+    public void setCurrentSpeed(int currentSpeed){
     }
 
     public int getCurrentSpeed() {
