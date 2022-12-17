@@ -5,12 +5,13 @@ public class F1 extends Car {
 
     // constructor to initialize the variables
     public F1(String name, boolean isManual) {
-        super(name, 4, "car", 4, 6, isManual, 1, 8);
+        super("BMW", 4, "car", 4, 6,true, 1, 8);
 
     }
 
     public void accelerate(int rate){
-        int newSpeed = getCurrentSpeed() + rate;
+        int newSpeed = 0;
+        newSpeed = getCurrentSpeed() + rate;
         //set the value of new speed by using currentSpeed and rate
         /**
          * speed 0: gear 1
