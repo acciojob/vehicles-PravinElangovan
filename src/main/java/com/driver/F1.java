@@ -5,8 +5,7 @@ public class F1 extends Car {
 
     // constructor to initialize the variables
     public F1(String name, boolean isManual) {
-        super(name,isManual);
-
+        super(name,4,"sport",4,6,isManual,4);
     }
 
     public void accelerate(int rate){
