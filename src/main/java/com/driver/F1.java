@@ -5,13 +5,15 @@ public class F1 extends Car {
 
     // constructor to initialize the variables
     public F1(String name, boolean isManual) {
-        super("BMW", 4, "car", 4, 6,true, 1, 8);
+        super(name,isManual);
 
     }
 
     public void accelerate(int rate){
         int newSpeed = 0;
-        newSpeed = getCurrentSpeed() + rate;
+        this.setCurrentSpeed(rate);
+
+        newSpeed=this.getCurrentSpeed();
         //set the value of new speed by using currentSpeed and rate
         /**
          * speed 0: gear 1
@@ -28,9 +30,7 @@ public class F1 extends Car {
             stop();
             changeGear(1);
         }
-        if(newSpeed > 0 ) {
-            changeSpeed(newSpeed, getCurrentDirection());
-        }
+
         //for all other cases, change the gear accordingly
         else if (newSpeed > 50 && newSpeed <= 100) {
             changeGear(2);
@@ -43,5 +43,8 @@ public class F1 extends Car {
         } else if (newSpeed > 250) {
             changeGear(6);
     }
+        if(newSpeed > 0 ) {
+            changeSpeed(newSpeed, getCurrentDirection());
+        }
 }
 }
