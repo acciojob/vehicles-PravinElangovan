@@ -31,6 +31,9 @@ public class Car extends Vehicle {
     public boolean isManual() {
         return isManual;
     }
+    public void setCurrentGear(int currentGear){
+        this.currentGear = currentGear;
+    }
 
     public int getCurrentGear() {
         return currentGear;
@@ -39,7 +42,9 @@ public class Car extends Vehicle {
     public int getSeats() {
         return seats;
     }
-
+    public void isManual(boolean manual){
+        this.isManual = manual;
+    }
     public Car(String name,int wheels,String type,int doors,int gears,boolean isManual,int seats) {
         super(name);
 

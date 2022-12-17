@@ -18,20 +18,19 @@ public class Vehicle {
     public String getName() {
         return name;
     }
-    public void setCurrentSpeed(int currentSpeed){
-    }
+
 
     public int getCurrentSpeed() {
         return currentSpeed;
     }
-    public int setCurrentDirection(int currentDirection){
-        return currentDirection;
-    }
+
     public int getCurrentDirection() {
         return currentDirection;
     }
 
-
+    public void setCurrentSpeed(int currentSpeed){
+        this.currentSpeed += currentSpeed;
+    }
     public void steer(int direction){
         //direction is in degrees, add it to the current direction
         this.currentDirection += direction;
